@@ -1,0 +1,643 @@
+QUESTION #1:
+---------------------
+You are referenced with 2 lists as follows.
+
+#LIST OF ACTIVITIES
+Commit_action_list=["Oct 10 11:38:36.890  MHNDSN-R06J-GZ-EG mgd[86299]: UI_COMMIT_PROGRESS: Commit operation in progress:  notifying mcsnoopd(103)",
+"Oct 10 11:38:41.310  MHNDSN-R06J-GZ-EG mgd[75791]: UI_DBASE_LOGOUT_EVENT: User 'doaa.a70456' exiting configuration mode",
+"Oct 10 11:38:53.803  MHNDSN-R06J-GZ-EG mgd[75791]: UI_CMDLINE_READ_LINE: User 'doaa.a70456', command 'ping 172.16.91.2 rapid '",
+"Oct 10 11:38:59.348  MHNDSN-R06J-GZ-EG mgd[75791]: UI_CMDLINE_READ_LINE: User 'doaa.a70456', command 'ping 172.16.91.2 rapid count 1000 '",
+"Oct 10 11:39:06.189  MHNDSN-R06J-GZ-EG mgd[75791]: UI_CMDLINE_READ_LINE: User 'doaa.a70456', command 'configure private '",
+"Oct 10 11:39:10.679  MHNDSN-R06J-GZ-EG mgd[75791]: UI_DBASE_LOGIN_EVENT: User 'doaa.a70456' entering configuration mode",
+"Oct 10 11:39:15.039  MHNDSN-R06J-GZ-EG mgd[75791]: UI_CMDLINE_READ_LINE: User 'doaa.a70456', command 'edit routing-instances MistMoh-MIST '",
+"Oct 10 11:39:24.162  MHNDSN-R06J-GZ-EG mgd[75791]: UI_CMDLINE_READ_LINE: User 'doaa.a70456', command 'edit interface ge-1/2/9.1101 '",
+"Oct 10 11:39:27.582  MHNDSN-R06J-GZ-EG mgd[75791]: UI_CMDLINE_READ_LINE: User 'doaa.a70456', command 'top '",
+"Oct 10 11:39:30.182  MHNDSN-R06J-GZ-EG mgd[75791]: UI_CMDLINE_READ_LINE: User 'doaa.a70456', command 'commit and-quit '",
+"Oct 10 11:39:30.187  MHNDSN-R06J-GZ-EG mgd[75791]: UI_COMMIT: User 'doaa.a70456' requested 'commit' operation (comment: none)",
+"Oct 10 11:39:30.317  MHNDSN-R06J-GZ-EG mgd[75791]: UI_COMMIT_PROGRESS: Commit operation in progress: Obtaining lock for commit",
+"Oct 10 11:39:57.581  MHNDSN-R06J-GZ-EG mgd[86350]: UI_AUTH_EVENT: Authenticated user 'root' at permission level 'super-user'",
+"Oct 10 11:39:57.581  MHNDSN-R06J-GZ-EG mgd[86350]: UI_LOGIN_EVENT: User 'root' login, class 'super-user' re1[86350], ssh-connection '', client-mode 'junoscript'",
+"Oct 10 11:40:04.357  MHNDSN-R06J-GZ-EG mgd[86349]: UI_SYNC_OTHER_RE: Configuration synchronization with remote Routing Engine started",
+"Oct 10 11:40:04.849  MHNDSN-R06J-GZ-EG mgd[86350]: UI_JUNOSCRIPT_CMD: User 'root' used JUNOScript client to run command 'get-commit-revision-information'",
+"Oct 10 11:40:04.950  MHNDSN-R06J-GZ-EG mgd[86350]: UI_JUNOSCRIPT_CMD: User 'root' used JUNOScript client to run command 'request-end-session'",
+"Oct 10 11:40:04.951  MHNDSN-R06J-GZ-EG mgd[86350]: UI_LOGOUT_EVENT: User 'root' logout",
+"Oct 10 11:41:50.584  MHNDSN-R06J-GZ-EG mgd[86577]: UI_SYNC_OTHER_RE: Configuration synchronization with remote Routing Engine started",
+"Oct 10 11:41:51.806  MHNDSN-R06J-GZ-EG mgd[86577]: UI_CHILD_START: Starting child '/bin/rcp'",
+"Oct 10 11:41:52.218  MHNDSN-R06J-GZ-EG mgd[86577]: UI_CHILD_STATUS: Cleanup child '/bin/rcp', PID 86581, status 0x100",
+"Oct 10 11:41:52.219  MHNDSN-R06J-GZ-EG mgd[86577]: UI_CHILD_START: Starting child '/bin/rcp'",
+"Oct 10 11:41:53.124  MHNDSN-R06J-GZ-EG mgd[86577]: UI_CHILD_STATUS: Cleanup child '/bin/rcp', PID 86583, status 0"]
+
+#LIST OF EVENTS
+Log_msg_list = ["Oct 10 11:40:21.108  MHNDSN-R06J-GZ-EG /kernel: rts_ifstate_client_close_job_handler: PHASE 2 sched-out, client:0xb28561d0, cl num:103, cl name:dot1xd",
+"Oct 10 11:40:21.108  MHNDSN-R06J-GZ-EG /kernel: rts_ifstate_client_close_job_handler: PHASE 2 entered, client:0xb28561d0, cl num:103,  cl name:dot1xd, next_state:0xae167000",
+"Oct 10 11:40:21.108  MHNDSN-R06J-GZ-EG /kernel: rts_ifstate_client_close_job_handler: PHASE 2 sched-out, client:0xb28561d0, cl num:103, cl name:dot1xd, next_state:0xa904fc60",
+"Oct 10 11:40:21.108  MHNDSN-R06J-GZ-EG /kernel: rts_ifstate_client_close_job_handler: PHASE 2 entered, client:0xb28561d0, cl num:103,  cl name:dot1xd, next_state:0xa904fc60",
+"Oct 10 11:40:21.108  MHNDSN-R06J-GZ-EG /kernel: rts_ifstate_client_close_job_handler: PHASE 2 sched-out, client:0xb28561d0, cl num:103, cl name:dot1xd, next_state:0xb05159b0",
+"Oct 10 11:40:21.109  MHNDSN-R06J-GZ-EG /kernel: rts_ifstate_client_close_job_handler: PHASE 2 entered, client:0xb28561d0, cl num:103,  cl name:dot1xd, next_state:0xb05159b0",
+"Oct 10 11:40:21.109  MHNDSN-R06J-GZ-EG /kernel: rts_ifstate_client_close_job_handler: client:0xb28561d0 client close job done, cl name:dot1xd, cl num:103",
+"Oct 10 11:40:20.726  MHNDSN-R06J-GZ-EG dot1xd[82832]: JTASK_SCHED_SLIP: 30 sec scheduler slip, user: 0 sec 1816 usec, system: 0 sec, 3478 usec",
+"Oct 10 11:40:20.730  MHNDSN-R06J-GZ-EG dot1xd[82832]: JTASK_SIGNAL_TERMINATE: first termination signal received",
+"Oct 10 11:40:21.087  MHNDSN-R06J-GZ-EG dot1xd[82832]: JTASK_EXIT: Exit dot1xd[82832] version 16.1R7-S1.1 built by builder on 2018-08-03 16:04:14 UTC, caller 0x1bba3b4",
+"Oct 10 11:40:20.718  MHNDSN-R06J-GZ-EG authd[86369]: shmlog: argcnt 152 not enough memory for argtype: pcrf-ureq-type: created with 0 mappings (needed 264 remaining 56)",
+"Oct 10 11:40:20.730  MHNDSN-R06J-GZ-EG dot1xd[82832]: task_terminate.c task_pre_terminate_method in PNACD",
+"Oct 10 11:40:21.099  MHNDSN-R06J-GZ-EG init: dot1x-protocol (PID 82832) exited with status=0 Normal Exit",
+"Oct 10 11:40:21.441  MHNDSN-R06J-GZ-EG /kernel: TNPv3: adding remote neighbor entry 0x00000032 hopcount 0 to interface em0.",
+"Oct 10 11:40:21.530  MHNDSN-R06J-GZ-EG rshd[86464]: root@master as root: cmd='rcp -f //var/etc/sgw_charging_transpport_profile.id'",
+"Oct 10 11:40:21.541  MHNDSN-R06J-GZ-EG authd[86369]: shmlog: argcnt 152 not enough memory for argtype: pcrf-ureq-post-src: created with 0 mappings (needed 264 remaining 56)",
+"Oct 10 11:40:21.740  MHNDSN-R06J-GZ-EG dcd[86363]: Warning: identical local address found on rt_inst default, intfs ge-1/1/1.1107 and ge-0/3/7.13479, family inet."]
+
+The list are filtered content of /var/log/messages and /var/log/interactive-command from your node.
+
+Your script must provide a "list of activities performed" retrived from the first list, if the second list has entry for "SCHED_SLIP".
+Here in the above ...
+The second list "Log_msg_list" has an entry JTASK_SCHED_SLIP as on Oct 10 11:40:20.
+The first list shows "configure start" and "commit stop" timing to be Oct 10 11:39:10 and not as of Oct 10 11:40:29. So for this example, do not worry of the timing involved.
+
+To find out the list of commands executed, look for the 2 keywords in the first list "Commit_action_list". 
+keywords:
+	"UI_DBASE_LOGIN_EVENT"  
+	"UI_COMMIT"
+The logs with keyword "UI_CMDLINE_READ_LINE" between the above 2 lines are the list of activities performed prior to the node entering to a CPU hog (SCHED_SLIP)
+
+NOTE: You can copy paste the above 2 lists as it is, as multiline input, which will be accepted by Python interpreter.
+
+QUESTION #2:
+---------------------
+(Exploring the use of arthematic operations)
+1. A list of IP address is provided
+IP_Address_List=["192.168.100.1",
+"233.10.0.1",
+"10.100.100.100",
+"155.100.100.100",
+"239.132.108.165",
+"172.108.10.10",
+"128.0.0.1",
+"87.60.50.50",
+"125.10.77.77",
+"223.76.65.32",
+"12.68.10.43",
+"126.12.12.1",
+"60.10.10.10",
+"125.120.100.197",
+"235.100.100.101",
+"192.168.100.1",
+"228.108.97.100",
+"109.120.210.112",
+"55.70.99.88",
+"235.23.86.92",
+"95.148.153.142",
+"239.245.245.1",
+"34.43.23.22",
+"75.40.19.10",
+"223.0.0.1"]
+
+
+Two tasks here.
+1. Convert those string to hex with arthematic operators. Represent the entries in the list in hex strings - like: ['0xc0a80101','0x80000001',...]
+2. Convert the above string list to an integer list (Performing IP to Int conversion - known method of using multiplication with 256 factor at respective octets)  
+	and then perform bit wise operation on that integer to identify the class of IP address involved and rewrite it in a dictionary
+
+Output Dict = IP_Class = {"Class_type":[List of the corresponding IP_address]}
+
+Bit wise Check for Class of address:
+Class 	MS Nibble	Examples
+D 		1110		0xe1646465
+C 		110X		0xc0a80101 
+B 		10XX		0x80000001
+A 		0XXX		0x0a646464
+
+Result of your IP Address to Integer Conversion formula can be validated in the below link.
+https://www.browserling.com/tools/ip-to-dec
+For Example : "192.168.100.1" in integer is 3232261121.
+
+NOTE: You can copy paste the above list as it is, as multiline input, which will be accepted by Python interpreter.
+
+QUESTION # 3:
+--------------
+Real life situation: Validate BGP peering is struck due to TCP segment struck in CLOSE_WAIT, TIME_WAIT or FIN_WAIT.
+
+Your script should find if any of the below BGP peer is not in " Establ" condition. For example here in this list it is "2600:300:2040:2710::4".
+Search for this entry in the other list to see if the BGP TCP connection to this peer is in Established state.
+Meaning you have to search for "2600:300:2040:2710::4" peering with your local side (here in this example it is 2600:300:2040:2704::1) in the TCP_Connection list and see if the connection is in "ESTABLISHED"
+
+CATCH HERE IS:
+Between "2600:300:2040:2704::1" and "2600:300:2040:2710::4" we can have other TCP port open and connected, we need to look out for 179.
+
+BGP_Peers = ["172.16.124.19         65032      18647      15672       0       1  1d 0:44:44 Establ",
+"172.16.124.20         65032        860        724       0       1     1:08:19 Establ",
+"172.16.124.91         65032      18655      15672       0       1  1d 0:44:43 Establ",
+"172.16.124.92         65032        856        724       0       1     1:08:17 Establ",
+"172.16.126.3          65032      18630      15672       0       1  1d 0:44:44 Establ",
+"172.16.126.4          65032        861        724       0       1     1:08:18 Establ",
+"172.16.126.11         65032      18649      15673       0       1  1d 0:44:42 Establ",
+"172.16.126.12         65032        858        724       0       1     1:08:17 Establ",
+"172.16.126.16         20057    1752813    1854137       0       0 17w3d 0:16:11 Establ",
+"172.16.126.18         20057    1752831    1854137       0       0 17w3d 0:16:07 Establ",
+"172.16.126.25         65022    1854149    1854151       0       0 17w3d 0:17:12 Establ",
+"172.16.126.33         65022    1854142    1854147       0       0 17w3d 0:16:41 Establ",
+"172.16.126.35         65022    1855109    1855129       0       0 17w3d 0:17:08 Establ",
+"172.16.126.36         20057    1753686    1854141       0       0 17w3d 0:16:02 Establ",
+"172.16.126.40         20057    1752817    1854151       0       0 17w3d 0:16:26 Establ",
+"172.16.126.42         20057    1752832    1854149       0       0 17w3d 0:16:14 Establ",
+"172.16.126.49         65022    1854166    1854178       0       0 17w3d 0:17:20 Establ",
+"172.16.126.60         20057    1753686    1854140       0       0 17w3d 0:15:58 Establ",
+"172.26.96.3           65032      18649      15672       0       1  1d 0:44:44 Establ",
+"172.26.96.4           65032        863        724       0       1     1:08:17 Establ",
+"172.26.96.11          65032      18630      15672       0       1  1d 0:44:41 Establ",
+"172.26.96.12          65032        863        724       0       1     1:08:17 Establ",
+"2600:300:2040:88::1       20057    1752812    1854131       0       0 17w3d 0:16:03 Establ",
+"2600:300:2040:8a::1       20057    1752828    1854129       0       0 17w3d 0:15:51 Establ",
+"2600:300:2040:8c::1       20057    1752808    1854132       0       0 17w3d 0:15:42 Establ",
+"2600:300:2040:8e::1       20057    1752828    1854133       0       0 17w3d 0:15:47 Establ",
+"2600:300:2040:2701::2       65022    1854691    1854684       0       0 17w3d 0:16:57 Establ",
+"2600:300:2040:2702::2       65022    1854133    1854138       0       0 17w3d 0:16:37 Establ",
+"2600:300:2040:2703::2       65022    1854145    1854151       0       0 17w3d 0:16:53 Establ",
+"2600:300:2040:2704::3       65032      18647      15673       0       1  1d 0:44:44 Establ",
+"2600:300:2040:2704::4       65032        862        723       0       1     1:08:17 Active",
+"2600:300:2040:2706::3       65032      18624      15671       0       1  1d 0:44:38 Establ",
+"2600:300:2040:2706::4       65032        860        724       0       1     1:08:18 Active",
+"2600:300:2040:2709::2       65022    1854155    1854161       0       0 17w3d 0:16:45 Establ",
+"2600:300:2040:270e::3       65032      18628      15670       0       1  1d 0:44:35 Establ",
+"2600:300:2040:270e::4       65032        860        724       0       1     1:08:17 Establ",
+"2600:300:2040:2710::3       65032      18657      15672       0       1  1d 0:44:41 Establ",
+"2600:300:2040:2710::4       65032          1          0       0       1     1:16:29 Idle (Close in progress)",
+"2600:300:2040:2710::4       65032          2          0       0       0       26:37 Active",
+"2600:300:2040:2720::1       20057    1753216    1854141       0       0 17w3d 0:15:43 Establ",
+"2600:300:2040:2722::1       20057    1753219    1854145       0       0 17w3d 0:16:03 Establ"]
+
+
+TCPConnection = ["tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2703::1.54343                   2600:300:2040:2703::2.179                     ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2710::1.179                     2600:300:2040:2710::4.43394                   ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2710::1.179                     2600:300:2040:2710::3.49036                   ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2706::1.179                     2600:300:2040:2706::4.49347                   ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2706::1.55885                   2600:300:2040:2706::3.179                     ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2702::1.62021                   2600:300:2040:2702::2.179                     ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2709::1.60890                   2600:300:2040:2709::2.179                     ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:270e::1.179                     2600:300:2040:270e::4.40367                   ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:270e::1.58049                   2600:300:2040:270e::3.179                     ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2704::1.179                     2600:300:2040:2704::4.37101                   ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2704::1.179                     2600:300:2040:2704::3.39314                   ESTABLISHED",
+"tcp6       0      0  *.*                                           *.*                                           CLOSED",
+"tcp6       0      0  2600:300:2040:2701::1.49815                   2600:300:2040:2701::2.179                     ESTABLISHED",
+"tcp6       0      0  2600:300:2040:2704::1.179                     2600:300:2040:2704::4.37101                   ESTABLISHED",
+"tcp6       0      0  2600:300:2040:2704::1.179                     2600:300:2040:2704::4.40367                   FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2704::1.179                     2600:300:2040:2704::4.49347                   FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:270e::1.58049                   2600:300:2040:270e::3.179                     FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2706::1.55885                   2600:300:2040:2706::4.179                     FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2710::1.179                     2600:300:2040:2710::3.49036                   FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2704::1.179                     2600:300:2040:2704::3.39314                   FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:8c::2.56166                     2600:300:2040:8c::1.179                       FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2720::2.62917                   2600:300:2040:2720::1.179                     FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:8e::2.55950                     2600:300:2040:8e::1.179                       FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:8a::2.51033                     2600:300:2040:8a::1.179                       FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:88::2.51214                     2600:300:2040:88::1.179                       FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2722::2.61269                   2600:300:2040:2722::1.179                     FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2702::1.62021                   2600:300:2040:2702::2.179                     FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2709::1.60890                   2600:300:2040:2709::2.179                     FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2703::1.54343                   2600:300:2040:2703::2.179                     FIN_WAIT_1",
+"tcp6       0      0  2600:300:2040:2701::1.49815                   2600:300:2040:2701::2.179                     FIN_WAIT_1",
+"tcp6       0      0  *.22                                          *.*                                           LISTEN",
+"tcp6       0      0  ::1.111                                       *.*                                           LISTEN",
+"udp46      0      0  *.58830                                       *.*",
+"udp46      0      0  *.161                                         *.*",
+"udp46      0      0  *.49152                                       *.*",
+"udp46      0      0  *.4784                                        *.*",
+"udp46      0      0  *.3784                                        *.*",
+"udp46      0      0  *.7784                                        *.*",
+"udp46      0      0  *.6784                                        *.*",
+"udp46      0      0  *.4784                                        *.*",
+"udp46      0      0  *.3784                                        *.*",
+"udp46      0      0  *.514                                         *.*",
+"udp46      0      0  *.777                                         *.*",
+"udp6       0      0  ::1.111                                       *.*"]
+
+
+NOTE: You can copy paste the above 2 lists as it is, as multiline input, which will be accepted by Python interpreter.
+
+QUESTION # 4
+-------------
+
+From "show interface extensive" we have an edited nested lists as below.
+
+The nexted lists is in the format
+[[Int 1 list detail- name, HW address,last Interface flap, traffic statistics list, nested list of Q statistics-[Q1 list,Q2 list,Q3 list,Q4 list]],
+ [Int 2 list detail- name, HW address,last Interface flap, traffic statistics list, nested list of Q statistics-[Q1 list,Q2 list,Q3 list,Q4 list]],
+....
+ [Int n list detail- name, HW address,last Interface flap, traffic statistics list, nested list of Q statistics-[Q1 list,Q2 list,Q3 list,Q4 list]]]
+
+NESTED LIST:
+Interface_list = [["Phy ge-2/0/0","HW 84:18:88:15:62:94","Last_flapped 2020-06-11 07:50:35 IST (00:50:00 ago)",["InB 567176522703 125 bps","OutB 9021527 145 bps","InPkt 478327653 9 pps","OutPkt 561232 10 pps"],[["Q0 QPkt 17118 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 39864 TxPkt 39864 DrpPkt 0"]]],
+["Phy ge-2/0/1","HW 84:18:88:16:32:34","Last_flapped 2020-06-11 07:59:35 IST (00:41:00 ago)",["InB 264323232341 150 bps","OutB 9037527 203 bps","InPkt 479837653 28 pps","OutPkt 56982 31 pps"],[["Q0 QPkt 17118 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 21864 TxPkt 39864 DrpPkt 0"]]],
+["Phy ge-2/0/2","HW 84:18:88:15:51:78","Last_flapped 2020-06-10 05:50:35 IST (1d 02:50 ago)",["InB 349635267033 240 bps","OutB 9037527 202 bps","InPkt 479837653 36 pps","OutPkt 56982 19 pps"],[["Q0 QPkt 3121TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 45864 TxPkt 21364 DrpPkt 0"]]],
+["Phy ge-2/0/3","HW 84:18:88:14:27:34","Last_flapped 2020-06-10 05:50:35 IST (1d 02:50 ago)",["InB 567163534982 0 bps","OutB 9037527 0 bps","InPkt 479837653 0 pps","OutPkt 56982 0 pps"],[["Q0 QPkt 27118 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 39672 TxPkt 39432 DrpPkt 0"]]],
+["Phy ge-2/0/4","HW 84:18:88:37:21:19","Last_flapped 2020-06-11 07:59:35 IST (00:41:00 ago)",["InB 34875926703 0 bps","OutB 9037527 0 bps","InPkt 479837653 0 pps","OutPkt 56982 0 pps"],[["Q0 QPkt 17516 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 39121 TxPkt 21234 DrpPkt 0"]]],
+["Phy ge-2/0/5","HW 84:18:88:47:76:28","Last_flapped 2020-06-11 07:59:35 IST (00:41:00 ago)",["InB 152390836703 523 bps","OutB 9037527 205 bps","InPkt 479837653 65 pps","OutPkt 56982 27 pps"],[["Q0 QPkt 17313 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 23122 TxPkt 39898 DrpPkt 0"]]],
+["Phy ge-2/0/6","HW 84:18:88:12:11:19","Last_flapped 2020-06-10 05:50:35 IST (1d 02:50 ago)",["InB 1234536534036 210 bps","OutB 9037527 104 bps","InPkt 2379837653 76 pps","OutPkt 56982 23 pps"],[["Q0 QPkt 17118 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 34322 TxPkt 35664 DrpPkt 0"]]],
+["Phy ge-2/0/7","HW 84:18:88:31:32:11","Last_flapped 2020-06-10 05:50:35 IST (1d 02:50 ago)",["InB 562322151335 562 bps","OutB 9037527 231 bps","InPkt 9883343223 45 pps","OutPkt 56982 32 pps"],[["Q0 QPkt 17118 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 45332 TxPkt 43265 DrpPkt 0"]]],
+["Phy ge-2/0/8","HW 84:18:88:19:23:21","Last_flapped 2020-06-11 07:50:35 IST (00:50:00 ago)",["InB 513435627037 180 bps","OutB 9037527 0 bps","InPkt 479837653 56 pps","OutPkt 56982 0 pps"],[["Q0 QPkt 17118 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 31098 TxPkt 27664 DrpPkt 0"]]],
+["Phy ge-2/1/0","HW 84:18:88:18:56:23","Last_flapped 2020-06-11 07:50:35 IST (00:50:00 ago)",["InB 5671635264703 0 bps","OutB 9037527 976 bps","InPkt 479837653 0 pps","OutPkt 56982 43 pps"],[["Q0 QPkt 17118 TxPkt 17118 DrpPkt 0"],["Q1 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q2 QPkt 0 TxPkt 0 DrpPkt 0"], ["Q3 QPkt 39543 TxPkt 12367 DrpPkt 0"]]]]
+
+
+Look out for interfaces that have flapped recently in the past 1 hour and whether traffic flow is observed in the interfaces mentioned in the Interface_list.
+
+KEY1: Traffic flow is true if BOTH InB and OutB is not ending with "0 bps" (or) BOTH InPkt and OutPkt is not ending with "0 bps".
+KEY2: How to search for interface flapped in the past 1 hr: - The uptime shown in brackets in the "Last_flapped" entry tells us.
+e.g: ge-2/0/0 is up for 00:50:00 ago, within the last 1 hr while the interface ge-2/0/3 is not.
+
+If the interface in this list is recently bounced, check further...
+	If the Traffic flow condition is true, then we can add that interface name to a new list "Rec_bounced_TX_Interfaces". 
+	Else put that in a new list "Rec_bounced_non_TX_Interfaces".
+If not recently bounced then add that interface to the interface list "Non_Rec_bounced_Interfaces".
+
+NOTE: You can copy paste the above list as it is, as multiline input, which will be accepted by Python interpreter.
+
+
+QUESTION # 5
+--------------
+Below is a consolidated Nested list of output of the command "monitor traffic interface extensive output" and list of the output of the command "show arp".
+
+In the first list - Mon_Int_lst,look out for ARP reply packet among all the packet observed for the interface. 
+From the ARP response packet find the sender MAC address and sender protocol address by decoding the "pkt content" inside the ARP response packet.
+Check that IP in the second list - ARP_Table if present.
+If present, then create a dictonary of {IP,MAC}
+
+KEY: For ARP response packet structure refer the below link.
+https://www.oreilly.com/library/view/packet-guide-to/9781449308094/ch04.html
+
+Structure of the "monitor traffic interface x extensive no-resolve print-hex layer2-header" Nested list
+----------------------------------------------------------------
+["TIME STAMP","HEADER SRC > DST - PKT TYPE","PKT CONTENT"]
+
+Mon_Int_lst=[["17:17:38.814696","d8:b1:22:eb:75:0e > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 46: vlan 3, p 0, ethertype ARP, arp who-has 12.3.0.1 tell 12.3.0.2","ffff ffff ffff d8b1 22eb 750e 8100 0003 0806 0001 0800 0604 0001 d8b1 22eb 750e 0c03 0002 0000 0000 0000 0c03 0001"],
+["17:17:38.815534","84:18:88:15:67:c0 > d8:b1:22:eb:75:0e, ethertype 802.1Q (0x8100), length 60: vlan 3, p 0, ethertype ARP, arp reply 12.3.0.1 is-at 84:18:88:15:67:c0","d8b1 22eb 750e 8418 8815 67c0 8100 0003 0806 0001 0800 0604 0002 8418 8815 67c0 0c03 0001 d8b1 22eb 750e 0c03 0002 0000 0000 0000 0000 0000 0000 0000"],
+["17:39:11.109512","d8:b1:22:eb:75:0e > 01:00:5e:00:00:05, ethertype 802.1Q (0x8100), length 98: vlan 4, p 6, ethertype IPv4, (tos 0xc0, ttl   1, id 42879, offset 0, flags [none], proto: OSPF (89), length: 80) 12.4.0.2 > 224.0.0.5: OSPFv2, Hello, length 60 [len 48]"," 0100 5e00 0005 d8b1 22eb 750e 8100 c004 0800 45c0 0050 a77f 0000 0159 250b 0c04 0002 e000 0005 0201 0030 6804 0404 0000 0000 0408 0000 0000 0000 0000 0000 ffff ff00 000a 1280 0000 0028 0c04 0002 0c04 0001 6400 0000 fff6 0003 0001 0004 0000 0001"],
+["17:39:11.537572","PFE proto 2 (ipv4): (tos 0xc0, ttl   1, id 27232, offset 0, flags [none], proto: OSPF (89), length: 80) 12.5.0.1 > 224.0.0.5: OSPFv2, Hello, length 60 [len 48]","0000 0002 45c0 0050 6a60 0000 0159 622a 0c05 0001 e000 0005 0201 0030 6400 0000 0000 0000 0204 0000 0000 0000 0000 0000 ffff ff00 000a 1280 0000 0028 0c05 0002 0c05 0001 6905 0505 fff6 0003 0001 0004 0000 0001"],
+["17:39:11.737562","PFE proto 2 (ipv4): (tos 0xc0, ttl   1, id 27248, offset 0, flags [none], proto: OSPF (89), length: 80) 12.3.0.1 > 224.0.0.5: OSPFv2, Hello, length 60 [len 48]","0000 0002 45c0 0050 6a70 0000 0159 621c 0c03 0001 e000 0005 0201 0030 6400 0000 0000 0000 060c 0000 0000 0000 0000 0000 ffff ff00 000a 1280 0000 0028 0c03 0002 0c03 0001 6703 0303 fff6 0003 0001 0004 0000 0001"],
+["17:39:13.725510","d8:b1:22:eb:75:0e > 01:00:5e:00:00:05, ethertype 802.1Q (0x8100), length 98: vlan 2, p 6, ethertype IPv4, (tos 0xc0, ttl   1, id 42978, offset 0, flags [none], proto: OSPF (89), length: 80) 12.2.0.2 > 224.0.0.5: OSPFv2, Hello, length 60 [len 48]","0100 5e00 0005 d8b1 22eb 750e 8100 c002 0800 45c0 0050 a7e2 0000 0159 24aa 0c02 0002 e000 0005 0201 0030 6602 0202 0000 0000 0810 0000 0000 0000 0000 0000 ffff ff00 000a 1280 0000 0028 0c02 0002 0c02 0001 6400 0000 fff6 0003 0001 0004 0000 0001"],
+["17:17:38.831643","d8:b1:22:eb:75:0e > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 46: vlan 2, p 0, ethertype ARP, arp who-has 12.2.0.1 tell 12.2.0.2","ffff ffff ffff d8b1 22eb 750e 8100 0002 0806 0001 0800 0604 0001 d8b1 22eb 750e 0c02 0002 0000 0000 0000 0c02 0001"],
+["17:17:38.832308","84:18:88:15:67:c0 > d8:b1:22:eb:75:0e, ethertype 802.1Q (0x8100), length 60: vlan 2, p 0, ethertype ARP, arp reply 12.2.0.1 is-at 84:18:88:15:67:c0","d8b1 22eb 750e 8418 8815 67c0 8100 0002 0806 0001 0800 0604 0002 8418 8815 67c0 0c02 0001 d8b1 22eb 750e 0c02 0002 0000 0000 0000 0000 0000 0000 0000"],
+["17:39:14.381799","PFE proto 2 (ipv4): (tos 0xc0, ttl   1, id 27398, offset 0, flags [none], proto: OSPF (89), length: 80) 12.2.0.1 > 224.0.0.5: OSPFv2, Hello, length 60 [len 48]","0000 0002 45c0 0050 6b06 0000 0159 6187 0c02 0001 e000 0005 0201 0030 6400 0000 0000 0000 0810 0000 0000 0000 0000 0000 ffff ff00 000a 1280 0000 0028 0c02 0002 0c02 0001 6602 0202 fff6 0003 0001 0004 0000 0001"],
+["17:17:38.818505","d8:b1:22:eb:75:0e > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 46: vlan 4, p 0, ethertype ARP, arp who-has 12.4.0.1 tell 12.4.0.2","ffff ffff ffff d8b1 22eb 750e 8100 0004 0806 0001 0800 0604 0001 d8b1 22eb 750e 0c04 0002 0000 0000 0000 0c04 0001"],
+["17:17:38.819152","84:18:88:15:67:c0 > d8:b1:22:eb:75:0e, ethertype 802.1Q (0x8100), length 60: vlan 4, p 0, ethertype ARP, arp reply 12.4.0.1 is-at 84:18:88:15:67:c0","d8b1 22eb 750e 8418 8815 67c0 8100 0004 0806 0001 0800 0604 0002 8418 8815 67c0 0c04 0001 d8b1 22eb 750e 0c04 0002 0000 0000 0000 0000 0000 0000 0000"],
+["17:17:38.822365","d8:b1:22:eb:75:0e > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 46: vlan 1, p 0, ethertype ARP, arp who-has 12.1.0.1 tell 12.1.0.2","ffff ffff ffff d8b1 22eb 750e 8100 0001 0806 0001 0800 0604 0001 d8b1 22eb 750e 0c01 0002 0000 0000 0000 0c01 0001"],
+["17:39:14.890495","d8:b1:22:eb:75:0e > 01:00:5e:00:00:05, ethertype 802.1Q (0x8100), length 98: vlan 5, p 6, ethertype IPv4, (tos 0xc0, ttl   1, id 43014, offset 0, flags [none], proto: OSPF (89), length: 80) 12.5.0.2 > 224.0.0.5: OSPFv2, Hello, length 60 [len 48]"," 0100 5e00 0005 d8b1 22eb 750e 8100 c005 0800 45c0 0050 a806 0000 0159 2483 0c05 0002 e000 0005 0201 0030 6905 0505 0000 0000 0204 0000 0000 0000 0000 0000 ffff ff00 000a 1280 0000 0028 0c05 0002 0c05 0001 6400 0000 fff6 0003 0001 0004 0000 0001"],
+["17:39:15.817490","PFE proto 2 (ipv4): (tos 0xc0, ttl   1, id 27476, offset 0, flags [none], proto: OSPF (89), length: 80) 12.1.0.1 > 224.0.0.5: OSPFv2, Hello, length 60 [len 48]","0000 0002 45c0 0050 6b54 0000 0159 613a 0c01 0001 e000 0005 0201 0030 6400 0000 0000 0000 0a14 0000 0000 0000 0000 0000 ffff ff00 000a 1280 0000 0028 0c01 0002 0c01 0001 6501 0101 fff6 0003 0001 0004 0000 0001"],
+["17:17:38.823031","84:18:88:15:67:c0 > d8:b1:22:eb:75:0e, ethertype 802.1Q (0x8100), length 60: vlan 1, p 0, ethertype ARP, arp reply 12.1.0.1 is-at 84:18:88:15:67:c0","d8b1 22eb 750e 8418 8815 67c0 8100 0001 0806 0001 0800 0604 0002 8418 8815 67c0 0c01 0001 d8b1 22eb 750e 0c01 0002 0000 0000 0000 0000 0000 0000 0000"],
+["17:17:38.827470","d8:b1:22:eb:75:0e > ff:ff:ff:ff:ff:ff, ethertype 802.1Q (0x8100), length 46: vlan 5, p 0, ethertype ARP, arp who-has 12.5.0.1 tell 12.5.0.2","ffff ffff ffff d8b1 22eb 750e 8100 0005 0806 0001 0800 0604 0001 d8b1 22eb 750e 0c05 0002 0000 0000 0000 0c05 0001"],
+["17:17:38.828266","84:18:88:15:67:c0 > d8:b1:22:eb:75:0e, ethertype 802.1Q (0x8100), length 60: vlan 5, p 0, ethertype ARP, arp reply 12.5.0.1 is-at 84:18:88:15:67:c0","d8b1 22eb 750e 8418 8815 67c0 8100 0005 0806 0001 0800 0604 0002 8418 8815 67c0 0c05 0001 d8b1 22eb 750e 0c05 0002 0000 0000 0000 0000 0000 0000 0000"]]
+
+ARP TABLE LIST
+ARP_Table =["MAC Address Address Name Interface Flags",
+"00:00:5e:00:01:13 10.219.39.65 10.219.39.65 fxp0.0 none",
+"84:18:88:15:67:c0 12.1.0.1 12.1.0.1 ae0.1 none",
+"84:18:88:15:67:c0 12.2.0.1 12.2.0.1 ae0.2 none",
+"84:18:88:15:67:c0 12.3.0.1 12.3.0.1 ae0.3 none",
+"84:18:88:15:67:c0 12.4.0.1 12.4.0.1 ae0.4 none",
+"84:18:88:15:67:c0 12.5.0.1 12.5.0.1 ae0.5 none",
+"02:00:00:00:00:10 128.0.0.50 tfeb0 em0.0 none"]
+
+NOTE: You can copy paste the above 2 lists as it is, as multiline input, which will be accepted by Python interpreter.
+
+
+
+QUESTION 6
+------------
+Real life situation: Validate OSPF TE configuration across network.
+
+TED DB ID structure = ID + Type + Age + LinkIn + LinkOut + Protocol + List of "To:"" Entries
+
+TED_DB = ["1.21.0.1-1 Net 7104 2 2 OSPF(0.0.0.0) To: 1.1.1.1, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 21.21.21.21, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"1.1.1.1 Rtr 6613 3 3 OSPF(0.0.0.0) To: 101.1.0.101-1, Local: 101.1.0.1, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 1.21.0.1-1, Local: 1.21.0.1, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 1.22.0.22-1, Local: 1.22.0.1, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"2.51.0.2-1 Net 6811 2 2 OSPF(0.0.0.0) To: 51.51.51.51, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 2.2.2.2, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"2.2.2.2 Rtr 4385 3 3 OSPF(0.0.0.0) To: 102.2.0.102-1, Local: 102.2.0.2, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 2.51.0.2-1, Local: 2.51.0.2, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 2.52.0.52-1, Local: 2.52.0.2, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"21.31.0.21-1 Net 6891 2 2 OSPF(0.0.0.0) To: 21.21.21.21, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 31.31.31.31, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"21.21.21.21 Rtr 6891 2 2 OSPF(0.0.0.0) To: 1.21.0.1-1, Local: 1.21.0.21, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 21.31.0.21-1, Local: 21.31.0.21, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"1.22.0.22-1 Net 6613 2 2 OSPF(0.0.0.0) To: 1.1.1.1, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 22.22.22.22, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"22.22.22.22 Rtr 6471 2 2 OSPF(0.0.0.0) To: 1.22.0.22-1, Local: 1.22.0.22, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 22.32.0.32-1, Local: 22.32.0.22, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"31.31.31.31 Rtr 6881 2 2 OSPF(0.0.0.0) To: 21.31.0.21-1, Local: 21.31.0.31, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 31.41.0.41-1, Local: 31.41.0.31, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"22.32.0.32-1 Net 6471 2 2 OSPF(0.0.0.0) To: 22.22.22.22, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 32.32.32.32, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"32.32.32.32 Rtr 6471 2 2 OSPF(0.0.0.0) To: 32.42.0.42-1, Local: 32.42.0.32, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 22.32.0.32-1, Local: 22.32.0.32, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"31.41.0.41-1 Net 6879 2 2 OSPF(0.0.0.0) To: 31.31.31.31, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 41.41.41.41, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"51.41.0.41-1 Net 6822 2 2 OSPF(0.0.0.0) To: 41.41.41.41, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 51.51.51.51, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"41.41.41.41 Rtr 6822 2 2 OSPF(0.0.0.0) To: 31.41.0.41-1, Local: 31.41.0.41, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 51.41.0.41-1, Local: 51.41.0.41, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"32.42.0.42-1 Net 6510 2 2 OSPF(0.0.0.0) To: 42.42.42.42, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 32.32.32.32, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"52.42.0.42-1 Net 6510 2 2 OSPF(0.0.0.0) To: 42.42.42.42, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 52.52.52.52, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"42.42.42.42 Rtr 6510 2 2 OSPF(0.0.0.0) To: 32.42.0.42-1, Local: 32.42.0.42, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 52.42.0.42-1, Local: 52.42.0.42, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"51.51.51.51 Rtr 6811 2 2 OSPF(0.0.0.0) To: 51.41.0.41-1, Local: 51.41.0.51, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 2.51.0.2-1, Local: 2.51.0.51, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"2.52.0.52-1 Net 4385 2 2 OSPF(0.0.0.0) To: 2.2.2.2, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 52.52.52.52, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"52.52.52.52 Rtr 4385 2 2 OSPF(0.0.0.0) To: 52.42.0.42-1, Local: 52.42.0.52, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 2.52.0.52-1, Local: 2.52.0.52, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"101.1.0.101-1 Net 10195 2 2 OSPF(0.0.0.0) To: 1.1.1.1, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 101.101.101.101, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"101.101.101.101 Rtr 10195 1 1 OSPF(0.0.0.0) To: 101.1.0.101-1, Local: 101.1.0.101, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"102.2.0.102-1 Net 6811 2 2 OSPF(0.0.0.0) To: 102.102.102.102, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0 To: 2.2.2.2, Local: 0.0.0.0, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0",
+"102.102.102.102 Rtr 6811 1 1 OSPF(0.0.0.0) To: 102.2.0.102-1, Local: 102.2.0.102, Remote: 0.0.0.0 Local interface index: 0, Remote interface index: 0"]
+
+
+Task here is to validate if the TED DB is proper.
+1. If we have an Node entry where the "Type" is missing, then we have a missing config on that router. 
+2. If there is a Psudo node entry (Type = Net) with LinkIn count less than LinkOut, Check out for the Node Type entry (Type = Rtr) to see if any one of them is showing LnkOut less than LnkIn.
+
+Print the Node ID which has an issue.
+
+A sample:
+
+PN ----- RTR1 (22.22.22.22) ----- 23.32.0.x ------ (32.32.32.32) RTR2 ---- PN
+
+ID                            Type Age(s) LnkIn LnkOut Protocol
+22.32.0.32-1                  Net   10471     1      2 OSPF(0.0.0.0) <<<<<<< This Psudonode has only 1 link inbound.
+    To: 22.22.22.22, Local: 0.0.0.0, Remote: 0.0.0.0				 >>>>>>> But is connected to 2 Router (Node) IDs.
+      Local interface index: 0, Remote interface index: 0
+    To: 32.32.32.32, Local: 0.0.0.0, Remote: 0.0.0.0
+      Local interface index: 0, Remote interface index: 0
+
+***** So check those Node ID for link out missing ********************
+
+ID                            Type Age(s) LnkIn LnkOut Protocol
+32.32.32.32                   Rtr       6     2      1 OSPF(0.0.0.0) >>>>>>> 1 LinkOut is missing. So there is a config issue in 32.32.32.32.
+    To: 32.42.0.42-1, Local: 32.42.0.32, Remote: 0.0.0.0
+      Local interface index: 0, Remote interface index: 0
+
+ID                            Type Age(s) LnkIn LnkOut Protocol
+22.22.22.22                   Rtr   10471     2      2 OSPF(0.0.0.0)
+    To: 1.22.0.22-1, Local: 1.22.0.22, Remote: 0.0.0.0
+      Local interface index: 0, Remote interface index: 0
+    To: 22.32.0.32-1, Local: 22.32.0.22, Remote: 0.0.0.0
+      Local interface index: 0, Remote interface index: 0
+
+KEY1: This validation doesn't include missing OSPF config (interface not added to OSPF) or link issue (Link down or OSPF Down)
+
+
+NOTE: You can copy paste the above list as it is, as multiline input, which will be accepted by Python interpreter.
+
+QUESTION 7
+-------------
+
+# Routing Engine CPU In MX
+
+# Each entry in this list is a list of process extensive at that command cycle. We have 5 iteration of the output collected and added in this list.
+
+Sys_Proc = [["   10 root        4 155 ki31     0K    64K CPU3    3    ??? 325.54% idle",
+"   11 root       25 -60    -     0K   400K WAIT   255 3409.0  71.68% intr",
+"13538 root        2 -26  r26   892M 31576K nanslp  1 552.3H   5.47% chassisd",
+"13586 root        1  21    0   715M  5296K select  3 213:30   1.46% eventd"],
+["   10 root        4 155 ki31     0K    64K CPU3    3    ??? 325.54% idle",
+"   11 root       25 -60    -     0K   400K WAIT   255 3409.0  56.69% intr",
+"13538 root        2 -26  r26   892M 31576K nanslp  1 552.3H   5.47% chassisd",
+"13586 root        1  21    0   715M  5296K select  3 213:30   1.46% eventd"],
+["   10 root        4 155 ki31     0K    64K CPU3    3    ??? 325.54% idle",
+"   11 root       25 -60    -     0K   400K WAIT   255 3409.0  61.38% intr",
+"13538 root        2 -26  r26   892M 31576K nanslp  1 552.3H   5.47% chassisd",
+"13586 root        1  21    0   715M  5296K select  3 213:30   1.46% eventd"],
+["   10 root        4 155 ki31     0K    64K CPU3    3    ??? 325.54% idle",
+"   11 root       25 -60    -     0K   400K WAIT   255 3409.0  71.64% intr",
+"13538 root        2 -26  r26   892M 31576K nanslp  1 552.3H   5.47% chassisd",
+"13586 root        1  21    0   715M  5296K select  3 213:30   1.46% eventd"],
+["   10 root        4 155 ki31     0K    64K CPU3    3    ??? 325.54% idle",
+"   11 root       25 -60    -     0K   400K WAIT   255 3409.0  74.61% intr",
+"13538 root        2 -26  r26   892M 31576K nanslp  1 552.3H   5.47% chassisd",
+"13586 root        1  21    0   715M  5296K select  3 213:30   1.46% eventd"]]
+
+# Virtual Memory allocation for various interrupts - Output of "show system virtual-memory"
+# Each entry in this list is a interrupt info from "show system virtual-memory" output at that command cycle. We have 5 iteration of the output collected and added in this list.
+
+VMStatI = [["interrupt                          total       rate",
+"irq4: uart0                         5687          0",
+"irq5: uart2                            8          0",
+"irq14: ata0                     14915620        100",
+"irq15: ata1                            1          0",
+"irq18: ichsmb0             5344101346867     145045",
+"irq23: ehci0                    55269622          1",
+"irq39: acb0                            1          0",
+"cpu0:timer                   34533005999        937",
+"irq256: em0                  13119211319        356",
+"irq257: em1                    930213042         25",
+"irq258: em2                     36843750          0",
+"cpu2:timer                   21487792492        583",
+"cpu3:timer                   21368494440        579",
+"cpu1:timer                   21774635040        590",
+"Total                      5457421733888     148120"],
+["interrupt                          total       rate",
+"irq4: uart0                         5687          0",
+"irq5: uart2                            8          0",
+"irq14: ata0                     24915620        200",
+"irq15: ata1                            1          0",
+"irq18: ichsmb0             5344101346867     145045",
+"irq23: ehci0                    55269622          1",
+"irq39: acb0                            1          0",
+"cpu0:timer                   34533005999        937",
+"irq256: em0                  13119211319        356",
+"irq257: em1                    930213042         25",
+"irq258: em2                     36843750          0",
+"cpu2:timer                   21487792492        583",
+"cpu3:timer                   21368494440        579",
+"cpu1:timer                   21774635040        590",
+"Total                      5457421733888     148120"],
+["interrupt                          total       rate",
+"irq4: uart0                         5687          0",
+"irq5: uart2                            8          0",
+"irq14: ata0                     34915620        300",
+"irq15: ata1                            1          0",
+"irq18: ichsmb0             5344101346867     145045", 
+"irq23: ehci0                    55269622          1",
+"irq39: acb0                            1          0",
+"cpu0:timer                   34533005999        937",
+"irq256: em0                  13119211319        356",
+"irq257: em1                    930213042         25",
+"irq258: em2                     36843750          0",
+"cpu2:timer                   21487792492        583",
+"cpu3:timer                   21368494440        579",
+"cpu1:timer                   21774635040        590",
+"Total                      5457421733888     148120"], 
+["interrupt                          total       rate",
+"irq4: uart0                         5687          0",
+"irq5: uart2                            8          0",
+"irq14: ata0                     44915620        400",
+"irq15: ata1                            1          0",
+"irq18: ichsmb0             5344101346867     145045",
+"irq23: ehci0                   555269622         51", 
+"irq39: acb0                            1          0",
+"cpu0:timer                   34533005999        937",
+"irq256: em0                  13119211319        356",
+"irq257: em1                    930213042         25",
+"irq258: em2                     36843750          0",
+"cpu2:timer                   21487792492        583",
+"cpu3:timer                   21368494440        579",
+"cpu1:timer                   21774635040        590",
+"Total                      5457421733888     148120"],
+["interrupt                          total       rate",
+"irq4: uart0                         5687          0",
+"irq5: uart2                            8          0",
+"irq14: ata0                     54915620        500", 
+"irq15: ata1                            1          0",
+"irq18: ichsmb0             5344101346867     145045",
+"irq23: ehci0                    55269622          1",
+"irq39: acb0                            1          0",
+"cpu0:timer                   34533005999        937",
+"irq256: em0                  13119211319        356",
+"irq257: em1                    930213042         25",
+"irq258: em2                     36843750          0",
+"cpu2:timer                   21487792492        583",
+"cpu3:timer                   21368494440        579",
+"cpu1:timer                   21774635040        590",
+"Total                      5457421733888     148120"]]
+
+Explanation of the coloumn involved
+------------------------------------
+1st Coloumn: Name of the interrupt.
+2nd Coloumn: number of interrupts taken by each device since system startup.
+3rd Coloumn: Arrival rate of interrupt at the RE in the interrupt cycle.
+Last row: Over all computed among all the interrupt.
+
+
+Find if overall interrupt in the 1st list Sys_Proc has been high at 50% of the RE CPU consistently in the 5 iterations. If observed then perform the below.
+a) at any instance, does any interrupt is at large above 60% of overall. 
+b) at any instance, does any any interrupt shows a spikes by 10% high than the previous one. 
+c) Among the instances, a particular interrupt is at a raise constantly.
+
+"irq18: ichsmb0             5344101346867     145045", .................(a)
+"irq23: ehci0                   555269622         51", .................(b)
+"irq14: ata0                     54915620        500", .................(c)
+
+
+NOTE: You can copy paste the above list as it is, as multiline input, which will be accepted by Python interpreter.
+
+
+QUESTION 8
+-------------
+Is RPD in Sync with the Kernel?
+
+Structure of these 2 nested lists are as follows.
+
+Rt_Tbl = nested list of entries of ["Route","[Entries of route output lines]"]
+FW_Tbl = [Entries from 'show route forwarding extensive'output lines"]
+
+Rt_Tbl = [["1.1.1.1/32         *[Direct/0] 00:59:16","> via lo0.0"],
+["1.21.0.0/24        *[Direct/0] 01:53:29","> via ge-0/0/3.0"],
+["1.21.0.1/32        *[Local/0] 01:53:29","Local via ge-0/0/3.0"],
+["1.22.0.0/24        *[Direct/0] 00:53:44","> via ge-0/0/4.0"],
+["1.22.0.1/32        *[Local/0] 00:53:44","Local via ge-0/0/4.0"],
+["2.2.2.2/32         *[OSPF/10] 00:16:36, metric 5",["> to 1.21.0.21 via ge-0/0/3.0","to 1.22.0.22 via ge-0/0/4.0"]],
+["2.51.0.0/24        *[OSPF/10] 00:57:08, metric 5","> to 1.21.0.21 via ge-0/0/3.0"],
+["2.52.0.0/24        *[OSPF/10] 00:51:22, metric 5","> to 1.22.0.22 via ge-0/0/4.0"],
+["10.102.163.13/32   *[Local/0] 04:43:49","Local via fxp0.0"],
+["21.21.21.21/32     *[OSPF/10] 01:01:48, metric 1","> to 1.21.0.21 via ge-0/0/3.0"],
+["21.31.0.0/24       *[OSPF/10] 01:01:48, metric 2","> to 1.21.0.21 via ge-0/0/3.0"],
+["22.22.22.22/32     *[OSPF/10] 00:53:44, metric 1","> to 1.22.0.22 via ge-0/0/4.0"],
+["22.32.0.0/24       *[OSPF/10] 00:53:44, metric 2","> to 1.22.0.22 via ge-0/0/4.0"],
+["31.31.31.31/32     *[OSPF/10] 00:58:18, metric 2","> to 1.21.0.21 via ge-0/0/3.0"],
+["31.41.0.0/24       *[OSPF/10] 00:58:18, metric 3","> to 1.21.0.21 via ge-0/0/3.0"],
+["32.32.32.32/32     *[OSPF/10] 00:51:22, metric 2","> to 1.22.0.22 via ge-0/0/4.0"],
+["32.42.0.0/24       *[OSPF/10] 00:51:22, metric 3","> to 1.22.0.22 via ge-0/0/4.0"],
+["41.41.41.41/32     *[OSPF/10] 00:58:07, metric 3","> to 1.21.0.21 via ge-0/0/3.0"],
+["42.42.42.42/32     *[OSPF/10] 00:51:22, metric 3","> to 1.22.0.22 via ge-0/0/4.0"],
+["51.41.0.0/24       *[OSPF/10] 00:58:07, metric 4","> to 1.21.0.21 via ge-0/0/3.0"],
+["51.51.51.51/32     *[OSPF/10] 00:57:08, metric 4","> to 1.21.0.21 via ge-0/0/3.0"],
+["52.42.0.0/24       *[OSPF/10] 00:51:22, metric 4","> to 1.22.0.22 via ge-0/0/4.0"],
+["52.52.52.52/32     *[OSPF/10] 00:51:22, metric 4","> to 1.22.0.22 via ge-0/0/4.0"],
+["66.129.255.62/32   *[Static/5] 04:43:49","> to 10.102.175.254 via fxp0.0"],
+["101.1.0.0/24       *[Direct/0] 01:53:29","> via ge-0/0/2.0"],
+["101.1.0.1/32       *[Local/0] 01:53:29","Local via ge-0/0/2.0"],
+["101.101.101.101/32 *[OSPF/10] 01:53:19, metric 1","> to 101.1.0.101 via ge-0/0/2.0"],
+["102.2.0.0/24       *[OSPF/10] 00:16:36, metric 6",["> to 1.21.0.21 via ge-0/0/3.0","to 1.22.0.22 via ge-0/0/4.0"]],
+["102.102.102.102/32 *[OSPF/10] 00:16:36, metric 6",["> to 1.21.0.21 via ge-0/0/3.0","to 1.22.0.22 via ge-0/0/4.0"]]]
+
+
+
+FW_Tbl = ["Destination        Type RtRef Next hop           Type Index    NhRef Netif",
+"default            perm     0                    rjct       36     1",
+"0.0.0.0/32         perm     0                    dscd       34     1",
+"1.1.1.1/32         intf     0 1.1.1.1            locl      591     1",
+"1.21.0.0/24        intf     0                    rslv      580     1 ge-0/0/3.0",
+"1.21.0.0/32        dest     0 1.21.0.0           recv      578     1 ge-0/0/3.0",
+"1.21.0.1/32        intf     0 1.21.0.1           locl      579     2",
+"1.21.0.1/32        dest     0 1.21.0.1           locl      579     2",
+"1.21.0.21/32       dest     0 0:5:86:1b:4b:3     ucst      590    18 ge-0/0/3.0",
+"1.21.0.255/32      dest     0 1.21.0.255         bcst      577     1 ge-0/0/3.0",
+"1.22.0.0/24        intf     0                    rslv      593     1 ge-0/0/4.0",
+"1.22.0.0/32        dest     0 1.22.0.0           recv      586     1 ge-0/0/4.0",
+"1.22.0.1/32        intf     0 1.22.0.1           locl      592     2",
+"1.22.0.1/32        dest     0 1.22.0.1           locl      592     2",
+"1.22.0.22/32       dest     0 0:5:86:2b:28:4     ucst      594    15 ge-0/0/4.0",
+"1.22.0.255/32      dest     0 1.22.0.255         bcst      585     1 ge-0/0/4.0",
+"2.2.2.2/32         user     0 1.21.0.21          ucst      590    18 ge-0/0/4.0",
+"2.51.0.0/24        user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"2.52.0.0/24        user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"10.0.0.0/8         user     2 0:0:5e:0:1:c9      ucst      341     8 fxp0.0",
+"10.102.160.0/20    intf     0                    rslv      340     1 fxp0.0",
+"10.102.160.0/32    dest     0 10.102.160.0       recv      338     1 fxp0.0",
+"10.102.160.37/32   dest     0 0:50:56:b2:5c:46   ucst      346     1 fxp0.0",
+"10.102.163.13/32   intf     0 10.102.163.13      locl      339     2",
+"10.102.163.13/32   dest     0 10.102.163.13      locl      339     2",
+"10.102.175.252/32  dest     0 10:e:7e:b1:f4:0    ucst      351     1 fxp0.0",
+"10.102.175.253/32  dest     0 10:e:7e:b1:b0:80   ucst      350     1 fxp0.0",
+"10.102.175.254/32  dest     0 0:0:5e:0:1:c9      ucst      341     8 fxp0.0",
+"10.102.175.255/32  dest     0 10.102.175.255     bcst      337     1 fxp0.0",
+"21.21.21.21/32     user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"22.22.22.22/32     user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"22.32.0.0/24       user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"31.31.31.31/32     user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"31.41.0.0/24       user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"32.32.32.32/32     user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"41.41.41.41/32     user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"42.42.42.42/32     user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"51.41.0.0/24       user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"51.51.51.51/32     user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"52.42.0.0/24       user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"52.52.52.52/32     user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"66.129.255.62/32   user     0 10.102.175.254     ucst      341     8 fxp0.0",
+"101.1.0.0/24       intf     0                    rslv      576     1 ge-0/0/2.0",
+"101.1.0.0/32       dest     0 101.1.0.0          recv      574     1 ge-0/0/2.0",
+"101.1.0.1/32       intf     0 101.1.0.1          locl      575     2",
+"101.1.0.1/32       dest     0 101.1.0.1          locl      575     2",
+"101.1.0.101/32     dest     0 0:5:86:8a:85:2     ucst      589     4 ge-0/0/2.0",
+"101.1.0.255/32     dest     0 101.1.0.255        bcst      573     1 ge-0/0/2.0",
+"101.101.101.101/32 user     0 101.1.0.101        ucst      589     4 ge-0/0/2.0",
+"102.2.0.0/24       user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"102.102.102.102/32 user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"128.102.161.75/32  user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"128.102.161.80/32  user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"128.102.161.87/32  user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"128.102.161.99/32  user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"128.102.162.66/32  user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"128.102.162.81/32  user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"128.102.162.93/32  user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"128.102.162.112/32 user     0 1.22.0.22          ucst      594    15 ge-0/0/4.0",
+"128.102.163.1/32   user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"128.102.163.13/32  intf     0 128.102.163.13     locl      513     1",
+"128.102.163.102/32 user     0 1.21.0.21          ucst      590    18 ge-0/0/3.0",
+"128.102.163.138/32 user     0 101.1.0.101        ucst      589     4 ge-0/0/2.0",
+"172.16.0.0/12      user     0 10.102.175.254     ucst      341     8 fxp0.0",
+"192.168.0.0/16     user     0 10.102.175.254     ucst      341     8 fxp0.0",
+"224.0.0.0/4        perm     1                    mdsc       35     1",
+"224.0.0.1/32       perm     0 224.0.0.1          mcst       31     3",
+"224.0.0.5/32       user     1 224.0.0.5          mcst       31     3",
+"255.255.255.255/32 perm     0                    bcst       32     1"]
+
+
+
+Look out for each entry of RPD i.e. the RT_Tbl in the Kernel FIB Table i.e. the FW_Tbl list.
+Look out for mismatch between the 2 tables.
+	If the entry is present in RPD but not in KRT 
+	If the NH info / outgoing info of these tables are not the same 
+Then we have a situation of RPD out of sync with KRT.
+Create a dict with structure as {Rt:Mismatch_Reason}
+Mismatch_Reason like "Missing Kernel entry" or "NH info mismatch".
+
+KEY1: Some routes are learnt over 2 path and only 1 path is active (Represented by ">" symbol) That next hop interface needs to be in the FW.
+E.g:
+["102.2.0.0/24       *[OSPF/10] 00:16:36, metric 6",["> to 1.21.0.21 via ge-0/0/3.0","to 1.22.0.22 via ge-0/0/4.0"]]
+
+
+NOTE: You can copy paste the above list as it is, as multiline input, which will be accepted by Python interpreter.
+
+
