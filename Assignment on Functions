@@ -1,0 +1,76 @@
+QUESTIONNAIRE
+ 
+1. Get 10 IP address as an input to tell if those IPs belong to a class A, B, C, D or E address.
+First initialize an empty dictionary. Define a function that evaluate the IP address passed as an argument to the function and add class name for that IP address into the defined dictionary.
+Call this function as on you get IP input from keyboard.
+Print the final populated dictionary at the end of the evaluation.
+ 
+Hint: Use global keyword inside the function definition referencing the dictionary initialized in the main flow.
+ 
+2. Attached here (Ref: PingTestResults.txt) are ping outputs of 5 packets sent to www.google.com taken 5 times.
+Use a function to find out which session had the maximum round-trip delay.
+ 
+3. Given here (attached Ref: VPNRoutes.txt) are 2 iterations of VPN route table.
+Find out if we have any route flap happened. Use Generator to yield mismatch in the age of the route.
+ 
+Hint: Use yield in a generator and call the generator using a For loop.
+Ref: https://www.programiz.com/python-programming/generator#with-loop
+ 
+ 
+4. Question on how to use Closure
+You are given 2 lists, OSPF neighbor output, BGP summary output.
+First create 2 functions OSPFChk and BGPChk that gets the above lists as input. These functions print any neighbor that is not up (for OSPF) or established (for BGP).
+Next create a function Validate_Protocol that returns a function as a closure. Assign the returned function object to variables OSPFClosure and BGPClosure.
+Call those function variables(function object) based on what user inputs - OSPF or BGP.
+ 
+For Reference: https://www.geeksforgeeks.org/python-closures/#:~:text=A%20closure%E2%80%94unlike%20a%20plain,is%20invoked%20outside%20their%20scope.
+http://www.trytoprogram.com/python-programming/python-closures/
+ 
+                OSPF_List = ["10.220.17.1      ge-1/0/0.0             Full      10.200.0.0       128    33",
+"10.220.27.1      ge-1/0/1.0             Full      10.200.0.1       128    33",
+"10.220.37.1      ge-1/0/2.0             Full      10.200.0.2       128    33",
+"10.220.47.1      ge-1/0/3.0             Full      10.200.0.3       128    33",
+"10.220.57.1      ge-1/0/4.0             Exstart      10.200.0.4       128    33",
+"10.220.67.1      ge-1/0/5.0             Full      10.200.0.5       128    33",
+"10.220.77.1      ge-1/0/6.0             Full      10.200.0.6       128    33",
+"10.220.87.1      ge-1/0/7.0             Full      10.200.0.7       128    33",
+"10.220.97.1      ge-1/0/8.0             Full      10.200.0.8       128    33",
+"10.220.107.1      ge-1/0/9.0             Init      10.200.0.9       128    33"]
+ 
+BGP_List = ["10.200.0.0            65111      16470      26391       0       2  5d 3:58:13 Establ",
+"10.200.0.1            65111      16372      52523       0       2  5d 3:58:13 Establ",
+"10.200.0.2            65111      16570      10521       0       2  5d 3:58:13 Establ",
+"10.200.0.3            65111      26479      46524       0       2  5d 3:58:13 Establ",
+"10.200.0.4            65111      10458      16529       0       2  5d 3:58:13 Establ",
+"10.200.0.5            65111      12378      36537       0       2  5d 3:58:13 Establ",
+"10.200.0.6            65111      36465      26429       0       2  5d 3:58:13 Establ",
+"10.200.0.7            65111          0          0       0       0  6d 4:21:40 Active",
+"10.200.0.8            65111          0          0       0       0  6d 4:21:40 Active",
+"125.1.1.1               100          0          0       0       0  6d 4:21:40 Idle",
+"125.1.1.1               100          0          0       0       0  6d 4:21:40 Idle"]
+ 
+5. An extract of LDP database is given.
+Define a function PopLbl that returns all the FEC for which a PHP label (label of 3) is assigned.
+Break your list (Extract) into two lists - InLblDB (Input label database) and OutLblDB (output label database) and call that function individually with the list as argument separately.
+NOTE: You are allowed to use a tuple and not allowed to use any other [or multiple] parameter in the function definition.
+ 
+Ref: https://www.geeksforgeeks.org/packing-and-unpacking-arguments-in-python/
+ 
+ 
+6. You are also provided with "show ospf neighbor detail" output below. Define and call a functions to see if any of the OSPF neighbor flapped post a specific time.
+Get input from keyboard for specific time in this format "1w0d 19:49 ago". if the format is correct, use that input obtained as a variable in the function call.
+If customer enters a different format, use the time - "1w0d 19:49 ago" (You see this in the show system uptime output) as the default keyword argument.
+ 
+                Protocol_StartTime = "Protocols started: 2020-08-17 08:31:44 PDT (1w0d 19:49 ago)"
+ 
+OSPF_Nbr = [“1.21.0.21        ge-0/0/3.0             Full      21.21.21.21      128    35",
+"  Up 1w0d 18:22:33, adjacent 1w0d 18:22:33",
+"1.22.0.22        ge-0/0/4.0             Full      22.22.22.22      128    35",
+"  Up 1w0d 18:22:33, adjacent 1w0d 18:22:33",
+"101.1.0.101      ge-0/0/2.0             Full      101.101.101.101  128    39",
+"  Up 1w0d 18:22:33, adjacent 1w0d 18:22:33",
+"21.31.0.31       vl-31.31.31.31         Full      31.31.31.31        0    32",
+"  Up 1w0d 18:22:33, adjacent 1w0d 18:22:33",
+"22.32.0.32       vl-32.32.32.32         Full      32.32.32.32        0    32",
+"  Up 1w0d 18:22:33, adjacent 1w0d 18:22:33"]
+ 
